@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="2.5.0" method="upgrade"> 
+    <name>virtuemart_exportceneoxml</name>       
+    <creationDate>Czerwiec 2014</creationDate>
+    <author>Projektowaniestronsacz</author>
+    <authorEmail>pawel.dudka@gazeta.pl</authorEmail>
+    <authorUrl>http://projektowaniestronsacz.pl</authorUrl>
+    <copyright>Copyright Info</copyright>
+    <license>MIT</license>      
+    <version>0.0.1</version>   
+    <description>Komponent umożliwia eksport oferty sklepu do porównywarki cen "Ceneo"</description> 
+    <install>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+    <uninstall> 
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+        </sql>
+    </uninstall>      
+    <files folder="site">
+        <filename>index.html</filename>
+        <filename>virtuemart_exportceneoxml.php</filename>
+        <filename>controller.php</filename>
+    </files> 
+    <administration>            
+        <menu>Ceneo</menu>                
+        <files folder="admin">                       
+            <filename>index.html</filename>
+            <filename>virtuemart_exportceneoxml.php</filename>
+            <filename>controller.php</filename>
+             <folder>helpers</folder>
+            <folder>sql</folder>
+            <folder>tables</folder>
+            <folder>views</folder>           
+        </files>
+    </administration> 
+</extension>
